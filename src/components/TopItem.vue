@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div class="top-item">
         <MyInput />
         <MyButton />
@@ -21,13 +21,5 @@ export default {
 
 <style>
 
-.top-item {
-  display: flex;
-  height: 60px;
-  align-items: center;
-  margin-top: 60px;
-  background: none;
-  gap: 20px;
 
-}
-</style>
+</style> -->

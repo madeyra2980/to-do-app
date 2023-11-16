@@ -1,38 +1,45 @@
 <template>
   <div class="my-input">
-    <input tabindex="6" type="text" v-model="inputValue" placeholder="Введите задачу">
+    <input tabindex="6" type="text"  placeholder="Введите задачу">
+    <MyButton/>
   </div>
 </template>
-  
+
 <script>
+import MyButton from './MyButton.vue';
 export default {
   name: 'MyInput',
+  components:{
+    MyButton
+  },
   data() {
     return {
       inputValue: ''
     };
-  }
+  },
+  
 }
 </script>
-  
+
 <style>
 .my-input {
-  opacity: .7;
-  background-color: rgb(133, 190, 203);
-  width: 400px;
-  height: 40px;
+  background-color: rgb(168, 217, 228);
+  opacity: .6;
+  width: 100%;
+  height: 200px;
   text-align: center;
   border-radius: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 .my-input input {
   text-align: center;
-  width: 100%;
   border: none;
-  height: 100%;
   font-size: 20px;
-
-  background: none;
+  margin-left: 40%;
+  height: 100px;
 }
 </style>
-  
