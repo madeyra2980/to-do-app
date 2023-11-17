@@ -1,23 +1,29 @@
 <template>
   <div class="my-input">
-    <input tabindex="6" type="text"  placeholder="Введите задачу">
-    <MyButton/>
+    <input
+    v-model="inputValue"
+    @input="inputValueTarget" 
+    tabindex="6" 
+    type="text"  
+    placeholder="Введите задачу"/>
   </div>
 </template>
 
 <script>
-import MyButton from './MyButton.vue';
 export default {
   name: 'MyInput',
   components:{
-    MyButton
   },
   data() {
     return {
-      inputValue: ''
+      inputValue: " "
     };
   },
-  
+  methods:{
+    inputValueTarget(){
+      this.$emit('input-value-changed', this.inputValue);
+    }
+  }
 }
 </script>
 
@@ -26,7 +32,7 @@ export default {
   background-color: rgb(168, 217, 228);
   opacity: .6;
   width: 100%;
-  height: 200px;
+  height: 120px;
   text-align: center;
   border-radius: 10px;
   align-items: center;
@@ -39,7 +45,6 @@ export default {
   text-align: center;
   border: none;
   font-size: 20px;
-  margin-left: 40%;
-  height: 100px;
+  height: 50px;
 }
 </style>
